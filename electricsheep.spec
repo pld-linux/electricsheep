@@ -19,7 +19,7 @@ BuildRequires:	libpng-devel
 Requires:	curl
 Requires:	xloadimage
 Requires:	xscreensaver
-BuildRoot:	/tmp/%{name}-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Electric Sheep is a screensaver that realizes the collective dream of
@@ -57,6 +57,7 @@ install -d $RPM_BUILD_ROOT/{%{_bindir},%{_datadir}/control-center/screensavers}
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
+%dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*.png
 %{_datadir}/control-center/screensavers/electricsheep.xml
 %{_mandir}/man1/*
