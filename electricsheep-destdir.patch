@@ -1,0 +1,11 @@
+diff -ur electricsheep-2.6.4-orig/Makefile.am electricsheep-2.6.4/Makefile.am
+--- electricsheep-2.6.4-orig/Makefile.am	2005-12-12 23:43:39.000000000 -0700
++++ electricsheep-2.6.4/Makefile.am	2005-12-16 22:23:45.000000000 -0700
+@@ -19,5 +19,5 @@
+ SCREENSAVER_DATADIR = $(GNOME_DATADIR)/control-center/screensavers
+ 
+ install-data-local:
+-	test -e $(SCREENSAVER_DATADIR) && $(INSTALL) electricsheep.xml $(SCREENSAVER_DATADIR)
+-	$(INSTALL) -d $(pkgdatadir)
++	test -e $(DESTDIR)$(SCREENSAVER_DATADIR) && $(INSTALL) electricsheep.xml $(DESTDIR)$(SCREENSAVER_DATADIR)
++	$(INSTALL) -d $(DESTDIR)$(pkgdatadir)
