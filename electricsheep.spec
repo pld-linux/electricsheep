@@ -50,8 +50,9 @@ kompresowane w celu udostêpnienia wszystkim klientom.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_bindir},%{_datadir}/control-center/screensavers}
+install -d $RPM_BUILD_ROOT/{%{_bindir},%{_datadir}/xscreensaver}
 %{__make} install \
+	SCREENSAVER_DATADIR=%{_datadir}/xscreensaver \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %files
@@ -59,7 +60,7 @@ install -d $RPM_BUILD_ROOT/{%{_bindir},%{_datadir}/control-center/screensavers}
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/%{name}
 %{_datadir}/%{name}/*.png
-%{_datadir}/control-center/screensavers/electricsheep.xml
+%{_datadir}/xscreensaver/*.xml
 %{_mandir}/man1/*
 
 %clean
