@@ -32,10 +32,10 @@ are compressed for distribution to all clients.
 %description -l pl
 Electric Sheep (Elektryczna owca) jest wygaszaczem ekranu realizuj±cym
 wspólny sen u¶pionych komputerów w ca³ym Internecie. Jest to modu³
-xscreensavera wy¶wietlaj±cy animowacjê fraktalnego p³omienie w
-formacie MPEG. W tle tworzone s± elementy przysz³ych animacji. Po
-ukoñczeniu s± one co jaki¶ czas zapisywane na serwerze, gdzie s±
-kompresowane w celu udostêpnienia wszystkim klientom.
+xscreensavera wy¶wietlaj±cy animacjê fraktalnego p³omienia w formacie
+MPEG. W tle tworzone s± elementy przysz³ych animacji. Po ukoñczeniu s±
+one co jaki¶ czas zapisywane na serwerze, gdzie s± kompresowane w celu
+udostêpnienia wszystkim klientom.
 
 %prep
 %setup -q
@@ -50,10 +50,14 @@ kompresowane w celu udostêpnienia wszystkim klientom.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_bindir},%{_datadir}/xscreensaver}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xscreensaver}
+
 %{__make} install \
 	SCREENSAVER_DATADIR=%{_datadir}/xscreensaver \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
@@ -62,6 +66,3 @@ install -d $RPM_BUILD_ROOT/{%{_bindir},%{_datadir}/xscreensaver}
 %{_datadir}/%{name}/*.png
 %{_datadir}/xscreensaver/*.xml
 %{_mandir}/man1/*
-
-%clean
-rm -rf $RPM_BUILD_ROOT
