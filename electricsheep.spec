@@ -10,7 +10,7 @@ Source0:	http://electricsheep.org/%{name}-%{version}.tar.gz
 Patch0:		%{name}-destdir.patch
 URL:		http://electricsheep.org/
 BuildRequires:	SDL-devel
-BuildRequires:	XFree86-devel
+BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	automake
 BuildRequires:	autoconf
 BuildRequires:	expat-devel
