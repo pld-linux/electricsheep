@@ -1,0 +1,56 @@
+--- mpeg2dec/include/Makefile.in	2005-07-20 07:44:14.000000000 +0200
++++ mpeg2dec/include/Makefile.in-new	2006-09-26 15:57:36.937742440 +0200
+@@ -315,7 +315,7 @@
+ uninstall: uninstall-am
+ 
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
+ 
+ installcheck: installcheck-am
+ install-strip:
+@@ -382,9 +382,9 @@
+ .PHONY: CTAGS GTAGS all all-am check check-am clean clean-generic \
+ 	ctags distclean distclean-generic distclean-hdr distclean-tags \
+ 	distdir dvi dvi-am html html-am info info-am install \
+-	install-am install-data install-data-am install-exec \
++	install-am install-data install-exec \
+ 	install-exec-am install-info install-info-am install-man \
+-	install-pkgincludeHEADERS install-strip installcheck \
++	install-strip installcheck \
+ 	installcheck-am installdirs maintainer-clean \
+ 	maintainer-clean-generic mostlyclean mostlyclean-generic pdf \
+ 	pdf-am ps ps-am tags uninstall uninstall-am uninstall-info-am \
+--- flam3/Makefile.in.orig	2006-05-14 03:19:17.000000000 +0200
++++ flam3/Makefile.in	2006-09-26 16:04:25.411644968 +0200
+@@ -569,7 +569,7 @@
+ uninstall: uninstall-am
+ 
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
+ 
+ installcheck: installcheck-am
+ install-strip:
+@@ -610,7 +610,7 @@
+ 
+ install-data-am: install-includeHEADERS install-pkgconfigDATA
+ 
+-install-exec-am: install-binPROGRAMS install-libLIBRARIES
++install-exec-am: install-binPROGRAMS
+ 
+ install-info: install-info-am
+ 
+@@ -647,9 +647,9 @@
+ 	distclean-hdr distclean-tags distcleancheck distdir \
+ 	distuninstallcheck dvi dvi-am html html-am info info-am \
+ 	install install-am install-binPROGRAMS install-data \
+-	install-data-am install-exec install-exec-am \
+-	install-includeHEADERS install-info install-info-am \
+-	install-libLIBRARIES install-man install-pkgconfigDATA \
++	install-exec install-exec-am \
++	install-info install-info-am \
++	install-man install-pkgconfigDATA \
+ 	install-strip installcheck installcheck-am installdirs \
+ 	maintainer-clean maintainer-clean-generic mostlyclean \
+ 	mostlyclean-compile mostlyclean-generic pdf pdf-am ps ps-am \
