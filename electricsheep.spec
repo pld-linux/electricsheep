@@ -2,12 +2,13 @@ Summary:	Collaborative screensaver
 Summary(pl):	Wygaszacz ekranu wspó³pracuj±cych komputerów
 Name:		electricsheep
 Version:	2.6.8
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://electricsheep.org/%{name}-%{version}.tar.gz
 # Source0-md5:	5c3535a7c679d67d460c1d9e259a5d38
 Patch0:		%{name}-destdir.patch
+Patch1:		%{name}-useless_files.patch
 URL:		http://electricsheep.org/
 BuildRequires:	SDL-devel
 BuildRequires:	xorg-lib-libX11-devel
@@ -40,6 +41,7 @@ udostêpnienia wszystkim klientom.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p0
 
 %build
 %{__aclocal}
@@ -55,10 +57,6 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/xscreensaver}
 %{__make} install \
 	SCREENSAVER_DATADIR=%{_datadir}/xscreensaver \
 	DESTDIR=$RPM_BUILD_ROOT
-
-#don't include devel and static files
-rm -rf $RPM_BUILD_ROOT%{_libdir}
-rm -rf $RPM_BUILD_ROOT%{_includedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
