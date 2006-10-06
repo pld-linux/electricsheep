@@ -11,12 +11,12 @@ Patch0:		%{name}-destdir.patch
 Patch1:		%{name}-useless_files.patch
 URL:		http://electricsheep.org/
 BuildRequires:	SDL-devel
-BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
-BuildRequires:	autoconf
 BuildRequires:	expat-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
+BuildRequires:	xorg-lib-libX11-devel
 Requires:	curl
 Requires:	xloadimage
 Requires:	xscreensaver
