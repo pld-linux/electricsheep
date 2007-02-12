@@ -1,5 +1,5 @@
 Summary:	Collaborative screensaver
-Summary(pl):	Wygaszacz ekranu wspó³pracuj±cych komputerów
+Summary(pl.UTF-8):   Wygaszacz ekranu wspÃ³Å‚pracujÄ…cych komputerÃ³w
 Name:		electricsheep
 Version:	2.6.8
 Release:	0.2
@@ -30,13 +30,13 @@ background it contributes render cycles to the future animations.
 Periodically it uploades completed frames to the server, where they
 are compressed for distribution to all clients.
 
-%description -l pl
-Electric Sheep (Elektryczna owca) jest wygaszaczem ekranu realizuj±cym
-wspólny sen u¶pionych komputerów w ca³ym Internecie. Jest to modu³
-xscreensavera wy¶wietlaj±cy animacjê fraktalnego p³omienia w formacie
-MPEG. W tle tworzone s± elementy przysz³ych animacji. Po ukoñczeniu s±
-one co jaki¶ czas zapisywane na serwerze, gdzie s± kompresowane w celu
-udostêpnienia wszystkim klientom.
+%description -l pl.UTF-8
+Electric Sheep (Elektryczna owca) jest wygaszaczem ekranu realizujÄ…cym
+wspÃ³lny sen uÅ›pionych komputerÃ³w w caÅ‚ym Internecie. Jest to moduÅ‚
+xscreensavera wyÅ›wietlajÄ…cy animacjÄ™ fraktalnego pÅ‚omienia w formacie
+MPEG. W tle tworzone sÄ… elementy przyszÅ‚ych animacji. Po ukoÅ„czeniu sÄ…
+one co jakiÅ› czas zapisywane na serwerze, gdzie sÄ… kompresowane w celu
+udostÄ™pnienia wszystkim klientom.
 
 %prep
 %setup -q
