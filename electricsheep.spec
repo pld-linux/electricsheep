@@ -1,5 +1,5 @@
 Summary:	Collaborative screensaver
-Summary(pl.UTF-8):   Wygaszacz ekranu współpracujących komputerów
+Summary(pl.UTF-8):	Wygaszacz ekranu współpracujących komputerów
 Name:		electricsheep
 Version:	2.6.8
 Release:	0.2
